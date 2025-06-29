@@ -11,7 +11,7 @@ import repository.AudioRepository;
 import service.Audioservice;
 
 @RestController
-@RequestMapping('api/audio')
+@RequestMapping("/api/audio")
 
 public class AudioController {
          private final Audioservice audioService;
@@ -19,13 +19,13 @@ public class AudioController {
     public AudioController(Audioservice audioService) {
         this.audioService = audioService;
     }
-    @PostMapping('/upload')
+    @PostMapping("/upload")
     public ResponseEntity<String> uploadAudio(
         @RequestParam("file") MultipartFile file,
         @RequestParam("userId") String userId,
         @RequestParam("title") String title,
         @RequestParam(value = "description", required = false) String description,
-        @RequestParam("recordingDate") @@DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime recordingDate
+        @RequestParam("recordingDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime recordingDate
     ) {
         audioService.processUpload(file, userId, title, description, recordingDate);
         return ResponseEntity.ok("Upload realizado com sucesso!");
