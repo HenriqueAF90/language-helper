@@ -1,6 +1,5 @@
 # Language Helper
 
-[![Open in Visual Studio Codespaces](https://img.shields.io/endpoint?style=social&url=https%3A%2F%2Faka.ms%2Fvso-badge)](https://online.visualstudio.com/environments/new?name=Language%20Helper&repo=seu-usuario/language-helper)
 
 Projeto Java Spring Boot para upload, armazenamento e transcrição de áudios via integração com IA.
 
